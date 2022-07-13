@@ -17,6 +17,7 @@ namespace Ex_01
             Term = term;
             Meaning = meaning;
         }
+        public Terms() { }
 
         public static void ListTerms()
 
@@ -37,19 +38,23 @@ namespace Ex_01
 
             var dictionary = DataBase.GetAllTerms();
 
-            term = NewTerm.TermValidation(term);
+            term = NewExpression.ExpressionValidation();
 
-            meaning = NewMeaning.MeaningValidation(term);
+            meaning = NewExpression.ExpressionValidation(term);
 
-            Console.WriteLine($"\n {term}: ({meaning}); cadastrado com sucesso!");
+            Console.WriteLine($"\n {term}: {meaning}; cadastrado com sucesso!");
             DataBase.SaveDb(term, meaning);
             Console.ReadKey();
         }
         public static void Search()
         {
-
+            string term = "";
+            string meaning ="";
+            Console.WriteLine("What term do you want to find the description?");
+            term = NewExpression.ExpressionValidation();
+            DataBase.GetMeaningByTerm(term);
+            
         }
-
 
     }
 }

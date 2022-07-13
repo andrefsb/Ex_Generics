@@ -45,19 +45,28 @@ namespace Ex_01
             XmlSerializer serializer = new XmlSerializer(typeof(List<Terms>));
             TextWriter write = new StreamWriter(dbPath);
             DataBase.dictionary.Add(new Terms(term, description));
-            serializer.Serialize(write, term);
+            serializer.Serialize(write, dictionary);
             write.Close();
         }
 
-        //public static Terms GetDescriptionByTerm(string logginEntry)
-        //{
-        //    foreach (var t in dictionary)
-        //    {
-        //        if (Entry == term.)
-        //            return term;
-        //    }
-        //    return null;
-        //}
+        public static void GetMeaningByTerm(string term)
+        {
+            int cont = 0;
+            foreach (var t in dictionary)
+            {
+                if (t.Term.ToLower().Contains(term.ToLower()))
+                {
+                    Console.WriteLine(t.Term.ToString() + ": " + t.Meaning.ToString() + ";");
+                    Console.WriteLine();
+                    cont++;
+                }
+            }
+            if (cont == 0)
+            {
+                Console.WriteLine("Nenhum termo encontrado.");
+            }
+
+        }
         public static List<Terms> GetAllTerms()
         {
             return dictionary.AsReadOnly().ToList();
