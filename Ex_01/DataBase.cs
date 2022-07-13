@@ -27,7 +27,7 @@ namespace Ex_01
 
         }
 
-        internal static int GetEmployeesCount()
+        internal static int GetTermsCount()
         {
             return dictionary.Count;
         }
@@ -44,7 +44,7 @@ namespace Ex_01
             }
         }
 
-        public static void SaveDb(string term, string description, List<Terms> dictionary)
+        public static void SaveDb(string term, string description)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<Terms>));
             TextWriter write = new StreamWriter(dbPath);
