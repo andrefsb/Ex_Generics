@@ -19,14 +19,14 @@ namespace Ex_01
         }
         public Terms() { }
 
-        public static void ListTerms()
+        //public static void ListTerms()
 
-        {
-            var dictionary = DataBase.GetAllTerms();
-            Table table = new Table(TableConfiguration.UnicodeAlt());
-            table.From<Terms>(dictionary);
+        //{
+        //    var dictionary = DataBase.GetAllTerms();
+        //    Table table = new Table(TableConfiguration.UnicodeAlt());
+        //    table.From<Terms>(dictionary);
 
-        }
+        //}
         public static void RegisterTerm()
         {
             string term = "";
@@ -34,7 +34,7 @@ namespace Ex_01
 
             var dictionaryCount = DataBase.GetTermsCount();
 
-            Console.WriteLine("New term data:\n");
+            Console.WriteLine("Informações do novo termo:\n");
 
             var dictionary = DataBase.GetAllTerms();
 
@@ -49,11 +49,12 @@ namespace Ex_01
         public static void Search()
         {
             string term = "";
-            string meaning ="";
-            Console.WriteLine("What term do you want to find the description?");
+            string meaning = "";
+            Console.WriteLine("Total de palavras já cadastradas: "+ DataBase.GetTermsCount());
+            Console.WriteLine("Para qual termo deseja encontrar a descrição?");
             term = NewExpression.ExpressionValidation();
             DataBase.GetMeaningByTerm(term);
-            
+
         }
 
     }

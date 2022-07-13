@@ -14,12 +14,12 @@ namespace Ex_01
             string expression = "";
             do
             {
-                Console.Write($"Insert the meaning for the term {term}: ");
+                Console.Write($"Insira a descrição para o termo '{term}': ");
                 expression = Console.ReadLine();
 
                 if (!expression.All(c => Char.IsLetterOrDigit(c) || c == ' ' || c == '-' || c == ',' || c == '.') || expression.Length < 1)
                 {
-                    Console.WriteLine($"The meaning can only have letters and numbers.");
+                    Console.WriteLine($"O significado deve conter apenas letras e números.");
                 }
             } while (!expression.All(c => Char.IsLetterOrDigit(c) || c == ' ' || c == '-' || c == ',' || c == '.') || expression.Length < 1);
             return expression;
@@ -29,11 +29,11 @@ namespace Ex_01
             string expression = "";
             do
             {
-                Console.Write($"Insert the term: ");
+                Console.Write($"Insira o termo: ");
                 expression = Console.ReadLine();
                 if (!expression.All(c => Char.IsLetterOrDigit(c) || c == ' ' || c == '-') || expression.Length < 1)
                 {
-                    Console.WriteLine($"The term can only have letters and numbers.");
+                    Console.WriteLine($"O termo deve conter apenas letras e números.");
                 }
                 //} while (!Regex.IsMatch(expression, @"^[a-zA-Z0-9]+$"));
             } while (!expression.All(c => Char.IsLetterOrDigit(c) || c == ' ' || c == '-') || expression.Length < 1);
