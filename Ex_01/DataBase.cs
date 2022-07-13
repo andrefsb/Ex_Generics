@@ -18,13 +18,10 @@ namespace Ex_01
                 var dictionary0 = new List<Terms>();
                 XmlSerializer serializer = new XmlSerializer(typeof(List<Terms>));
                 TextWriter write0 = new StreamWriter(dbPath);
-
                 serializer.Serialize(write0, dictionary0);
-
                 write0.Close();
             }
             dictionary = LoadDb();
-
         }
 
         internal static int GetTermsCount()
@@ -38,7 +35,6 @@ namespace Ex_01
                 XmlSerializer serializer = new XmlSerializer(typeof(List<Terms>));
                 TextReader reader = new StreamReader(dbPath);
                 var objeto = serializer.Deserialize(reader);
-
                 reader.Close();
                 return (List<Terms>)objeto;
             }

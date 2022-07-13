@@ -30,16 +30,10 @@ namespace Ex_01
         {
             string term = "";
             var meaning = "";
-  
-            List<string> nameS = new List<string>();
 
-            var employeesCount = DataBase.GetTermsCount();
-            if (employeesCount < 1)
-            {
-                Console.WriteLine("Cadastro do primeiro acesso:\n");
-            }
+            var dictionaryCount = DataBase.GetTermsCount();
 
-            Console.WriteLine("Dados do novo funcionário\n");
+            Console.WriteLine("New term data:\n");
 
             var dictionary = DataBase.GetAllTerms();
 

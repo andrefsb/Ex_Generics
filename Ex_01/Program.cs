@@ -36,7 +36,7 @@ namespace Ex_01
 
             var menu = new MenuItem("Menu Principal");
 
-            var terms = new MenuItem("Palavras");
+            var terms = new MenuItem("Dicionário");
             terms.Add(new MenuItem("Cadastrar Palavras", Terms.RegisterTerm));
             terms.Add(new MenuItem("Procurar Palavras", Terms.Search));
             terms.Add(new MenuItem("Listar Palavras", Terms.ListTerms));

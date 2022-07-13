@@ -11,6 +11,7 @@ namespace Ex_01
         public static string MeaningValidation(string term)
         {
             string meaning = "";
+            Console.WriteLine($"Insert the meaning for the term {term}: ");
             return meaning;
         }
     }

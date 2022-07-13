@@ -11,7 +11,7 @@ namespace Ex_01
         public static string TermValidation(string term)
         {
             Console.Write("Insert the new term: ");
-            Console.ReadLine();
+            term = Console.ReadLine();
 
             return term;
         }
