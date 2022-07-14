@@ -32,19 +32,13 @@ namespace Ex_01
             Console.ResetColor();
             Console.Title = "Let’s Speak";
 
-            //Login.Enter();
-
             var menu = new MenuItem("Menu Principal");
             var terms = new MenuItem("Dicionário");
             terms.Add(new MenuItem("Cadastrar Palavras", Terms.RegisterTerm));
             terms.Add(new MenuItem("Procurar Palavras", Terms.Search));
             //terms.Add(new MenuItem("Listar Palavras", Terms.ListTerms));
 
-            //var submenu = new MenuItem("Submenu");
-            //submenu.Add(new MenuItem("item do submenu"));
-
             menu.Add(terms);
-            //menu.Add(submenu);
 
             menu.Execute();
         }

@@ -36,8 +36,6 @@ namespace Ex_01
 
             Console.WriteLine("Informações do novo termo:\n");
 
-            var dictionary = DataBase.GetAllTerms();
-
             term = NewExpression.ExpressionValidation();
 
             meaning = NewExpression.ExpressionValidation(term);
@@ -56,6 +54,5 @@ namespace Ex_01
             DataBase.GetMeaningByTerm(term);
 
         }
-
     }
 }
