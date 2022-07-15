@@ -26,6 +26,7 @@ namespace Ex_01
             var dictionary = DataBase.GetAllTerms();
             Table table = new Table(TableConfiguration.UnicodeAlt());
             table.From<Terms>(dictionary);
+            Console.WriteLine("Total de palavras cadastradas: " + DataBase.GetTermsCount());
             Console.Write(table.ToString());
         }
         public static void RegisterTerm()
