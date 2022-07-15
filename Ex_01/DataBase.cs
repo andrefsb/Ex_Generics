@@ -67,6 +67,10 @@ namespace Ex_01
             }
 
         }
+        public static List<Terms> GetAllTerms()
+        {
+            return dictionary.AsReadOnly().ToList();
+        }
 
     }
 }

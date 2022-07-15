@@ -36,7 +36,10 @@ namespace Ex_01
             var terms = new MenuItem("Dicionário");
             terms.Add(new MenuItem("Cadastrar Palavras", Terms.RegisterTerm));
             terms.Add(new MenuItem("Procurar Palavras", Terms.Search));
-            //terms.Add(new MenuItem("Listar Palavras", Terms.ListTerms));
+            terms.Add(new MenuItem("Listar Palavras", Terms.ListTerms));
+            terms.Add(new MenuItem("Editar Palavra", Terms.EditTerm));
+            terms.Add(new MenuItem("Remover Palavra", Terms.RemoveTerm));
+            terms.Add(new MenuItem("Sair", () => Environment.Exit(0)));
 
             menu.Add(terms);
 
